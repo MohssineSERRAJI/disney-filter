@@ -12,7 +12,6 @@ import { MainNav } from '@/components/layout/navigation/shadcn/main-nav'
 import { UserAccountNav } from '@/components/layout/navigation/user-account-nav'
 import AuthLink from '@/components/shared/auth-link'
 import ButtonShareFeedback from '@/components/shared/button-share-feedback'
-import ChangelogButton from '@/components/shared/changelog-button'
 
 import MobileSheetMenu from '../shadcn/mobile-sheet-menu'
 import { MainNavItem } from '@/root/types'
@@ -48,7 +47,7 @@ export function NavBar({
         <div className="flex items-center space-x-3">
           {rightElements}
 
-          {!user && (
+          {/* {!user && (
             <>
               <ChangelogButton />
               <AuthLink
@@ -58,7 +57,7 @@ export function NavBar({
                 className="hidden md:flex"
               />
             </>
-          )}
+          )} */}
 
           {user && (
             <>
@@ -79,11 +78,11 @@ export function NavBar({
                 size="sm"
                 onClick={signInModal.onOpen}
               >
-                Sign In
+                Apply Disney Filter
               </Button>
               <AuthLink
                 href="/register"
-                text="Sign in"
+                text="Apply Disney Filter"
                 className={'flex md:hidden'}
               />
             </>
